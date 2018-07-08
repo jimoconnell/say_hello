@@ -9,8 +9,8 @@ parser.add_argument("say", help="Speak the provided phrase")
 args = parser.parse_args()
 
 mytext = args.say
-  if not mytext:
-        mytext = "You didn't tell me what to say!"
+if not mytext:
+  mytext = "You didn't tell me what to say!"
         
 tts = gtts.gTTS(mytext, lang='en')
 tts.save("/tmp/tmp.mp3")
